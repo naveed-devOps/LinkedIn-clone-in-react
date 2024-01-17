@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,
+    system-ui
+    ,BlinkMacSystemFont
+    ,"Segoe UI"
+    ,Roboto
+    ,"Helvetica Neue"
+    ,"Fira Sans"
+    ,Ubuntu
+    ,Oxygen
+    ,"Oxygen Sans"
+    ,Cantarell
+    ,"Droid Sans"
+    ,"Apple Color Emoji"
+    ,"Segoe UI Emoji"
+    ,"Segoe UI Emoji"
+    ,"Segoe UI Symbol"
+    ,"Lucida Grande"
+    ,Helvetica
+    ,Arial
+    ,sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    font-size: 62.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+ justify-content: center;
+    background-color: #F4F2EE;
+    overflow-x: hidden;
+    display: flex;
+   
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width:1229px) {
+    html{
+        font-size: 50%;
+    }
 }
-
-.App-link {
-  color: #61dafb;
+@media (max-width:975px) {
+    .container{
+        width: 90rem;
+        grid-template-columns: 30% 60%;
+    }
+    .box3,.box6{
+        display: none;
+    }
+    .input-div{
+        display: none;
+    }
+    .nav-left{
+        width: 6rem;
+    }
+    .nav-center{
+        width: 55rem;
+        justify-content: start;
+    }
+    .nav-right{
+        width: 25rem;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width:775px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,minmax(10rem,1fr));
+    }
+    .box4{
+        grid-row: 5/6;
+    }
+    .box5{
+        grid-row: 3/4;
+    }
+}
+@media (max-width:690px) {
+    .nav-center{
+        justify-content: space-around;
+    }
+    .nav-right-left>p{
+        cursor: pointer;
+        display: none;
+    }
+    .nav-box>p{
+        display: none;
+    }
+}
+@media (max-width:500px) {
+    .nav-right{
+        display: none;
+    }
+    .nav-center{
+        border-right: none;
+        width: 100%;
+    }
+}
+@media (max-width:425px) {
+    .container{
+        padding-top: 6rem;
+    }
+    .box{
+        border-radius: 0px;
+    }
+    .post{
+        border-radius: 0px;
+    }
 }

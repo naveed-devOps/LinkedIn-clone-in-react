@@ -1,0 +1,161 @@
+nav{
+    height: 6rem;
+    width: 100%;
+    margin-bottom: 2.1rem;
+    display: flex;
+    position: fixed;
+    padding: 0px 5%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.202);
+    background-color: white;
+    z-index: 99;
+  }
+  .nav-left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: start;
+  }
+  .nav-left>img{
+    width: 3.2rem;
+    border-radius: .2rem;
+  }
+  .nav-left>.input-div{
+    border: none;
+    height: 3rem;
+    border-radius: .2rem;
+    width: 50rem;
+    position: relative;
+  }
+  .input-div>input{
+    border: none;
+    height: 100%;
+    border-radius: .2rem;
+    width: 100%;
+    padding-left: 3rem;
+    background-color: #EDF3F8;
+  }
+  .input-div>i{
+    position: absolute;
+    font-size: 1.5rem;
+    top: 25%;
+    left: 2%;
+  }
+  .nav-center{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: end;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(128, 128, 128, 0.202);
+  }
+  .nav-box{
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+  }
+  .nav-box>i{
+    font-size: 2rem;
+    color: gray;
+  }
+  .nav-box>img{
+    width: 2.5rem;
+    border-radius: 50%;
+  }
+  .nav-box:hover ,.nav-box:hover>i{
+    color: black;
+  }
+  .nav-right{
+    cursor: pointer;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4rem;
+  }
+  .nav-right-left{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-right-left>i{
+    font-size: 2rem;
+  }
+  @media (max-width:1229px) {
+    html{
+        font-size: 50%;
+    }
+  }
+  @media (max-width:975px) {
+    .container{
+        width: 90rem;
+        grid-template-columns: 30% 60%;
+    }
+    .box3,.box6{
+        display: none;
+    }
+    .input-div{
+        display: none;
+    }
+    .nav-left{
+        width: 6rem;
+    }
+    .nav-center{
+        width: 55rem;
+        justify-content: start;
+    }
+    .nav-right{
+        width: 25rem;
+    }
+  }
+  @media (max-width:775px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,minmax(10rem,1fr));
+    }
+    .box4{
+        grid-row: 5/6;
+    }
+    .box5{
+        grid-row: 3/4;
+    }
+  }
+  @media (max-width:690px) {
+    .nav-center{
+        justify-content: space-around;
+    }
+    .nav-right-left>p{
+        cursor: pointer;
+        display: none;
+    }
+    .nav-box>p{
+        display: none;
+    }
+  }
+  @media (max-width:500px) {
+    .nav-right{
+        display: none;
+    }
+    .nav-center{
+        border-right: none;
+        width: 100%;
+    }
+  }
+  @media (max-width:425px) {
+    .container{
+        padding-top: 6rem;
+    }
+    .box{
+        border-radius: 0px;
+    }
+    .post{
+        border-radius: 0px;
+    }
+  }
